@@ -20,7 +20,12 @@ function App() {
 
   const submit = async() => {
     try {
-      await Axios.post('', { name, email, subject, message })
+      await Axios.post('https://api.gpchat.com.br/api/v1/support', { 
+        nome: name, 
+        email, 
+        assunto: subject, 
+        mensagem: message 
+      })
       setName('')
       setEmail('')
       setSubject('')
